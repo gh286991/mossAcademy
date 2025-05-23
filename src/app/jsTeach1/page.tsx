@@ -1,16 +1,15 @@
-import fs from 'fs';
-import path from 'path';
-import { MDXRemote } from 'next-mdx-remote/rsc';
+'use client'
+import JsTeach1Content from '@/content/jsTeach1.mdx';
 import CodeEditor from '@/components/CodeEditor';
+import { MDXProvider } from '@mdx-js/react';
 
-export default async function JSTeach1Page() {
-  const filePath = path.join(process.cwd(), 'src/content/jsTeach1.mdx');
-  const source = fs.readFileSync(filePath, 'utf8');
-
+export default function JSTeach1Page() {
   return (
     <div className="container mx-auto px-4 py-8">
       <article className="prose lg:prose-xl">
-        <MDXRemote source={source} components={{ CodeEditor }} />
+        <MDXProvider components={{ CodeEditor }}>
+          <JsTeach1Content />
+        </MDXProvider>
       </article>
     </div>
   );

@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import withMDX from '@next/mdx';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -8,4 +9,9 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withMDX({
+  extension: /\.mdx?$/,
+  options: {
+    // 可加 remark/rehype plugin
+  },
+})(nextConfig);
