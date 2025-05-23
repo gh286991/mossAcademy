@@ -1,0 +1,55 @@
+# JavaScript For 迴圈教學
+
+For 迴圈是 JavaScript 中最常用的迴圈結構之一。它允許我們重複執行一段程式碼特定的次數123233
+
+## 基本語法
+
+For 迴圈的基本語法如下：
+
+```javascript
+for (初始化; 條件; 更新) {
+    // 要執行的程式碼
+}
+```
+
+
+## 陣列遍歷
+
+For 迴圈常用於遍歷陣列：
+
+<CodeEditor
+  initialCode={`// 遍歷陣列並印出每個元素
+const fruits = ['蘋果', '香蕉', '橘子'];
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}`}
+/>
+
+## 巢狀迴圈
+
+我們也可以在迴圈中嵌套另一個迴圈：
+
+<CodeEditor
+  initialCode={`// 使用巢狀迴圈印出九九乘法表
+for (let i = 1; i <= 3; i++) {
+    for (let j = 1; j <= 3; j++) {
+        console.log(\`\${i} x \${j} = \${i * j}\`);
+    }
+}`}
+/>
+
+## 練習題
+
+試試看寫一個程式，計算 1 到 10 的總和：
+
+<CodeEditor
+  initialCode={`// 計算 1 到 10 的總和
+let sum = 0;
+
+for (let i = 1; i <= 10; i++) {
+    sum += i;
+}
+
+console.log('總和是：', sum);`}
+/>

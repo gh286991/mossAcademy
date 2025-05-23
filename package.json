@@ -9,7 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@contentlayer/source-files": "^0.3.4",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@monaco-editor/react": "^4.7.0",
+    "@types/mdx": "^2.0.13",
+    "contentlayer": "^0.3.4",
+    "fs": "^0.0.1-security",
     "next": "15.1.8",
+    "next-contentlayer": "^0.3.4",
+    "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
